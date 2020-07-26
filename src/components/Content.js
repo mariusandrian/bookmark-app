@@ -27,6 +27,7 @@ export class Content extends Component {
                 <NewBookmarkForm 
                     title={this.state.title} 
                     url={this.state.url} 
+                    backendURL={BACKEND_URL}
                     // handleChange={this.handleChange} 
                 />
                 {/* <BookmarkList bookmarks={this.state.bookmarks}/> */}
