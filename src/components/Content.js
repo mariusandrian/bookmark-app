@@ -21,6 +21,10 @@ export class Content extends Component {
         this.loadData();
     }
 
+    addToList = (item) => {
+        this.setState({ bookmarks: [item, ...this.state.bookmarks] })
+    }
+
     render() {
         return (
             <div className="content-container">
@@ -28,9 +32,9 @@ export class Content extends Component {
                     title={this.state.title} 
                     url={this.state.url} 
                     backendURL={BACKEND_URL}
-                    // handleChange={this.handleChange} 
+                    addToList={this.addToList}
                 />
-                {/* <BookmarkList bookmarks={this.state.bookmarks}/> */}
+                <BookmarkList bookmarks={this.state.bookmarks}/>
             </div>
         )
     }

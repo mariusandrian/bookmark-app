@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  margin: 0 20%;
 }
 
 .App-logo {
@@ -35,4 +36,17 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.bookmark-item {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  min-height: 40px;
+  margin: 20px;
+  background-color: pink;
+  padding-top: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }

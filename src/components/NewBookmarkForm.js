@@ -10,7 +10,6 @@ export class NewBookmarkForm extends Component {
     }
 
     handleChange = (event) => {
-        console.log(event.target.value);
         this.setState({ [event.target.id]: event.target.value })
     }
 
@@ -27,12 +26,12 @@ export class NewBookmarkForm extends Component {
         }
         this.setState({}, async () => {
             try {
-                const response = await fetch(this.props.backendURL, requestOptions);
-                const result = await response.json();
+                await fetch(this.props.backendURL, requestOptions);
                 this.setState({
                     title: '',
                     url: ''
                 })
+                this.props.addToList(newItem);
             } catch(err) {
                 console.log(err);
             }
